@@ -6,7 +6,7 @@ import argparse
 parser = argparse.ArgumentParser(description='Download some YT channels.')
 
 # Add the optional flag for the directory
-parser.add_argument('-d', '--directory', type=str, help='The root directory to store videos.', default='.')
+parser.add_argument('-d', '--directory', type=str, help='The root directory to store videos.', default='output')
 args = parser.parse_args()
 directory = args.directory
 
@@ -28,9 +28,9 @@ def dlvideo(channel: str, limit: int = 20) -> None:
         try:
             ydl.download(vide_url)
         except ydl.ExtractError as e:
-            print(f'Tring alterative for {video}({e})')
+            print(f'Trying alterative for {video}({e})')
         except yt_dlp.utils.DownloadError as e:
-            print(f'Tring alterative for {video}({e})')
+            print(f'Trying alterative for {video}({e})')
         else:
             yt_opts = {
                 'verbose': False,
