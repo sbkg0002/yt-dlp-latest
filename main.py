@@ -47,6 +47,6 @@ def dlvideo(channel: str, limit: int = 20) -> None:
 # channel_list = ['deofficielepeppa']
 # channel_list = ['BingNederlands']
 # channel_list = ['MegaTrucks157']
-channel_list = ['HelperCars']
+channel_list = ['creachickofficial']
 for channel in channel_list:
-    dlvideo(channel=channel, limit=40)
+    dlvideo(channel=channel, limit=30)
